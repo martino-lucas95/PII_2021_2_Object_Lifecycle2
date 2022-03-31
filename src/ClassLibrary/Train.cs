@@ -14,6 +14,23 @@ namespace ClassLibrary
     public class Train
     {
         /// <summary>
+        /// count es una variable de clase que te permitirá acumular la cantidad de instancias creadas.
+        /// </summary>
+        //private static int count = 0;
+        public static int count {get; private set; } = 0;
+
+        public string id {get; set; }
+
+        public Train(string id){
+            this.id = id;
+            count += 1;
+        }
+        ~Train()
+        {
+            count--;
+        }
+
+        /// <summary>
         /// Obtiene un valor que indica si las maquinas del tren han sido encendidas o no.
         /// </summary>
         /// <value><c>true</c> si las máquinas fueron encendidas, <c>false</c> en caso contrario.</value>
@@ -56,13 +73,6 @@ namespace ClassLibrary
             Console.Write("The engines are already stopped");
             return this.IsEngineStarted;
         }
-        /// <summary>
-        /// count es una variable de clase que te permitirá acumular la cantidad de instancias creadas.
-        /// </summary>
-        //private static int count = 0;
-        public static int count {get; private set; } = 0;
-
-        public string id {get; set; }
 
     }
 }

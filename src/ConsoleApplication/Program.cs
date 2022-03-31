@@ -19,7 +19,7 @@ namespace ConsoleApplication
         /// </summary>
         public static void Main()
         {
-            var train = new Train();
+            var train = new Train("tren1");
             train.StartEngines();
             Console.WriteLine("Hello World!");
         }
