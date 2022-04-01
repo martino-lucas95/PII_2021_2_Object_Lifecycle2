@@ -1,4 +1,5 @@
-﻿//--------------------------------------------------------------------------------
+﻿using System.Globalization;
+//--------------------------------------------------------------------------------
 // <copyright file="Train.cs" company="Universidad Católica del Uruguay">
 //     Copyright (c) Programación II. Derechos reservados.
 // </copyright>
@@ -72,6 +73,25 @@ namespace ClassLibrary
 
             Console.Write("The engines are already stopped");
             return this.IsEngineStarted;
+        }
+
+        public void OneHundredTrains()
+        {
+            while(count < 100)
+            {
+                Train tren = new Train("tren");
+                Console.WriteLine(count);
+            }
+            
+        }
+        public void TenMillionTrains()
+        {
+            while(count < 1000000)
+            {
+                Train tren = new Train("tren");
+                Console.WriteLine(count);
+            }
+            
         }
 
     }
