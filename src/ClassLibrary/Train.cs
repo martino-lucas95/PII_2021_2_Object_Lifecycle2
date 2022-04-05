@@ -1,4 +1,5 @@
-﻿//--------------------------------------------------------------------------------
+﻿using System.Globalization;
+//--------------------------------------------------------------------------------
 // <copyright file="Train.cs" company="Universidad Católica del Uruguay">
 //     Copyright (c) Programación II. Derechos reservados.
 // </copyright>
@@ -13,6 +14,23 @@ namespace ClassLibrary
     /// </summary>
     public class Train
     {
+        /// <summary>
+        /// count es una variable de clase que te permitirá acumular la cantidad de instancias creadas.
+        /// </summary>
+        //private static int count = 0;
+        public static int count {get; private set; } = 0;
+
+        public string id {get; set; }
+
+        public Train(string id){
+            this.id = id;
+            count += 1;
+        }
+        ~Train()
+        {
+            count--;
+        }
+
         /// <summary>
         /// Obtiene un valor que indica si las maquinas del tren han sido encendidas o no.
         /// </summary>
@@ -56,13 +74,25 @@ namespace ClassLibrary
             Console.Write("The engines are already stopped");
             return this.IsEngineStarted;
         }
-        /// <summary>
-        /// count es una variable de clase que te permitirá acumular la cantidad de instancias creadas.
-        /// </summary>
-        //private static int count = 0;
-        public static int count {get; private set; } = 0;
 
-        public string id {get; set; }
+        public void OneHundredTrains()
+        {
+            while(count < 100)
+            {
+                Train tren = new Train("tren");
+                Console.WriteLine(count);
+            }
+            
+        }
+        public void TenMillionTrains()
+        {
+            while(count < 1000000)
+            {
+                Train tren = new Train("tren");
+                Console.WriteLine(count);
+            }
+            
+        }
 
     }
 }
