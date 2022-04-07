@@ -26,8 +26,10 @@ namespace ConsoleApplication
             //Train t1 = new Train("t1");
             //t1.OneHundredTrains();   
             //t1.TenMillionTrains();
-            //Console.WriteLine(t1==t2);
-            //Console.WriteLine(t2==t3);
+            
+            //Por mas que tenga el mismo nombre del objeto, no identico, por lo que, al comparar, va a dar False.
+            // Console.WriteLine(t1==t2);
+            // Console.WriteLine(t2==t3);
         }
     }
 }
