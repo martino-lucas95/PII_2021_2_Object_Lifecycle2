@@ -24,7 +24,7 @@ namespace ClassLibrary
 
         public Train(string id){
             this.id = id;
-            count ++;
+            count += 1;
 
             Console.WriteLine(count);
         }
@@ -82,7 +82,6 @@ namespace ClassLibrary
             while(count < 100)
             {
                 Train tren = new Train("tren");
-                Console.WriteLine(count);
             }
             
         }
@@ -91,7 +90,6 @@ namespace ClassLibrary
             while(count < 1000000)
             {
                 Train tren = new Train("tren");
-                Console.WriteLine(count);
             }
             
         }

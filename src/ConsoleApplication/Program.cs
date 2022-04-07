@@ -19,11 +19,11 @@ namespace ConsoleApplication
         /// </summary>
         public static void Main()
         {
-            Train t1 = new Train("Last Train To London");
-            Train t2 = new Train("Last Train To London");
-            Train t3 = new Train("Runaway Train");     
-            //Train t1 = new Train("t1");
-            //t1.OneHundredTrains();   
+            // Train t1 = new Train("Last Train To London");
+            // Train t2 = new Train("Last Train To London");
+            // Train t3 = new Train("Runaway Train");     
+            Train t1 = new Train("t1");
+            t1.OneHundredTrains();   
             //t1.TenMillionTrains();
             
             //Por mas que tenga el mismo nombre del objeto, no identico, por lo que, al comparar, va a dar False.
