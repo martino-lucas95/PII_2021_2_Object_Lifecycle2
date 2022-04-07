@@ -17,14 +17,16 @@ namespace ClassLibrary
         /// <summary>
         /// count es una variable de clase que te permitirá acumular la cantidad de instancias creadas.
         /// </summary>
-        //private static int count = 0;
-        public static int count {get; private set; } = 0;
 
-        public string id {get; set; }
+        private static int count {get; set; } = 0;
+
+        private string id {get; set; }
 
         public Train(string id){
             this.id = id;
-            count += 1;
+            count ++;
+
+            Console.WriteLine(count);
         }
         ~Train()
         {
